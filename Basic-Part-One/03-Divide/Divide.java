@@ -10,8 +10,13 @@ public class Divide {
         int x = scanner.nextInt();
         System.out.print("Please input number: ");
         int y = scanner.nextInt();
-        int result = x / y;
-        System.out.println();
-        System.out.println("x/y = " + result);
+        try {
+            int result = x / y;
+            System.out.println();
+            System.out.println("x/y = " + result);
+        } catch (ArithmeticException e) {
+            System.out.println();
+            System.out.println("computation error, please check!");
+        }
     }
 }
